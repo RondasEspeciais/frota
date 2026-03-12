@@ -1,0 +1,23 @@
+{
+  "name": "Gestão de Frota",
+  "short_name": "Frota",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#dcdcdc",
+  "theme_color": "#304c3a",
+  "description": "Sistema PWA de gestão de frota com operação offline, alertas e relatórios.",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

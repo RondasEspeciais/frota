@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Frota</title>
+
+  <meta name="theme-color" content="#304c3a" />
+  <meta name="description" content="PWA de gestão de frota com operação offline, alertas, relatórios e sincronização." />
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200..700,0..1,-50..200" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-box">
+        <h1>GESTÃO DE FROTA RONDESP</h1>
+        <div class="brand-sub">
+          <span id="connectionBadge" class="badge offline">Offline</span>
+          <span id="syncBadge" class="badge neutral">Sem sincronizar</span>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-btn active" data-screen="dashboard">
+          <span class="material-symbols-outlined icon">dashboard</span>
+          <span>Dashboard</span>
+        </button>
+
+        <button class="menu-btn" data-screen="motoristas">
+          <span class="material-symbols-outlined icon">person</span>
+          <span>Cadastro Motoristas</span>
+        </button>
+
+        <button class="menu-btn" data-screen="viaturas">
+          <span class="material-symbols-outlined icon">directions_car</span>
+          <span>Cadastro Viaturas</span>
+        </button>
+
+        <button class="menu-btn" data-screen="abastecimentos">
+          <span class="material-symbols-outlined icon">local_gas_station</span>
+          <span>Abastecimentos</span>
+        </button>
+
+        <button class="menu-btn" data-screen="manutencoes">
+          <span class="material-symbols-outlined icon">event_available</span>
+          <span>Agendar Manutenção</span>
+        </button>
+
+        <button class="menu-btn" data-screen="reparos">
+          <span class="material-symbols-outlined icon">build</span>
+          <span>Reparos Realizados</span>
+        </button>
+
+        <button class="menu-btn" data-screen="consultas">
+          <span class="material-symbols-outlined icon">search</span>
+          <span>Consultas</span>
+        </button>
+
+        <button class="menu-btn" data-screen="relatorios">
+          <span class="material-symbols-outlined icon">bar_chart</span>
+          <span>Relatórios</span>
+        </button>
+      </nav>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Dashboard</h2>
+          <p id="pageSubtitle">Visão geral da operação, alertas e indicadores</p>
+        </div>
+
+        <<div class="top-actions">
+  <button id="notifyBtn" class="btn btn-light">Ativar alertas</button>
+  <button id="installBtn" class="btn btn-light hidden">Instalar app</button>
+  <button id="exportJsonBtn" class="btn btn-light">Exportar JSON</button>
+  <button id="exportCsvBtn" class="btn btn-light">Exportar CSV</button>
+  <button id="exportPdfBtn" class="btn btn-light">Gerar PDF</button>
+  <button id="syncBtn" class="btn btn-primary">Sincronizar</button>
+</div>
+
+      </header>
+
+      <main id="screen"></main>
+    </section>
+  </div>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/app.js"></script>
+    <!-- Adicione antes de <script src="./js/db.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <script src="./js/db.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
+
+</body>
+</html>
